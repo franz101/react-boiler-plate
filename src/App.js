@@ -1,34 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {Bar, Header, Footer, SideBar, Main} from './Components/Components'
+import React, {Fragment} from 'react';
+import { Switch } from 'react-router';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-class App extends Component {
-  render() {
-    return (
-      <div id='App' className='App-header'>
-      <Header>
-      <Bar items = {['Home','Menu','Start']}/>
-        <h1>Welcome</h1>
-        </Header>
-        <Main>
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          </Main>
-          <Footer>Franz Krekeler</Footer>
-      </div>
-    );
-  }
-}
+import routes from './Constants/routes';
+import AboutApp from './AboutApp';
+import App from './HomeApp';
 
-export default App;
+const NoMatch = () => (<div>ERROR</div>)
+
+export default () => (
+  <Router>
+  <Switch>
+  <Route exact path={routes.HOME} component={App}/>
+  <Route path={routes.ABOUT} component={AboutApp}/>
+  <Route path={routes.IMPRINT} component={App}/>
+  <Route component={NoMatch}/>
+</Switch>
+</Router>
+);
