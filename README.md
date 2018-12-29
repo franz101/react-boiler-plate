@@ -1,4 +1,26 @@
+# CodePen Development Style for React in VS Code
+## Usage:
+
+![Screenshot](./react-vs-setup.png)
+
+## Requirements:
+- VS Code
+- Node
+- [Live Server Preview](https://marketplace.visualstudio.com/items?itemName=negokaz.live-server-preview)
+
+## Setup
+```javascript
+npm install
+npm start
+// open the vscode.html file in VS CODE
+// Run >Show Live Server Preview
+```
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 ## Available Scripts
 

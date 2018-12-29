@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Bar, Header, Footer, SideBar, Main} from './Components/All'
+import {Bar, Header, Footer, SideBar, Main} from './Components/Components'
 
 class App extends Component {
   render() {
     return (
-      <div id='App'>
+      <div id='App' className='App-header'>
       <Header>
       <Bar items = {['Home','Menu','Start']}/>
         <h1>Welcome</h1>
